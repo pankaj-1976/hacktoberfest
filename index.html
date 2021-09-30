@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="main.js" type="text/javascript"></script> -->
+    <script>
+        let outputBox = document.querySelector(".output");
+
+        let getBody = document.body;
+
+        function getValue() {
+
+            let red = document.getElementById("red").value;
+            let green = document.getElementById("green").value;
+            let blue = document.getElementById("blue").value;
+            let alpha = document.getElementById("alpha").value;
+
+            getBody.style.background = `rgba(${red},${green},${blue},${alpha})`;
+            outputBox.innerHTML = `rgba(${red},${green},${blue},${alpha})`;
+
+        }
+
+        function copy() {
+
+            let element = document.createElement("textarea");
+
+            element.value = outputBox.textContent;
+            document.body.appendChild(element);
+            element.select();
+            document.execCommand("copy")
+            document.body.removeChild(element);
+            alert("Copied!!")
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="silders">
+
+            <label>Red</label>
+
+            <input type="range" min="0" max="255" value="0" oninput="getValue()" id="red" />
+
+            <label>Green</label>
+
+            <input type="range" min="0" max="255" value="0" oninput="getValue()" id="green" />
+
+            <label>Blue</label>
+
+            <input type="range" min="0" max="255" value="0" oninput="getValue()" id="blue" />
+
+            <label>Alpha</label>
+
+            <input type="range" min="0.1" max="1.0" step="0.1" value="1" oninput="getValue()" id="alpha" />
+
+            <div class="output-box">
+
+                <div class="output">rgba(0,0,0,1)</div>
+
+                <div class="copyBtn" onclick="copy()"><i class="fa fa-clone" aria-hidden="true"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
