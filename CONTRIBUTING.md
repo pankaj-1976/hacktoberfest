@@ -1,3 +1,7 @@
+# General Info
+
+This is RGBA Color Generator made with HTML & CSS
+
 # Rules to Follow H1
 * No Plagiarism (Don't copy someone's work)
 * This folder should contain README.md containing author information
