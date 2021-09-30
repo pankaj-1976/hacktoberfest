@@ -1,3 +1,3 @@
 # hacktoberfest
 
-RGB Color Generator
+RGBA Color Generator
