@@ -7,36 +7,7 @@
     <link rel="icon" href="https://www.freeiconspng.com/uploads/website-icon-8.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="main.js" type="text/javascript"></script> -->
-    <script>
-        let outputBox = document.querySelector(".output");
-
-        let getBody = document.body;
-
-        function getValue() {
-
-            let red = document.getElementById("red").value;
-            let green = document.getElementById("green").value;
-            let blue = document.getElementById("blue").value;
-            let alpha = document.getElementById("alpha").value;
-
-            getBody.style.background = `rgba(${red},${green},${blue},${alpha})`;
-            outputBox.innerHTML = `rgba(${red},${green},${blue},${alpha})`;
-
-        }
-
-        function copy() {
-
-            let element = document.createElement("textarea");
-
-            element.value = outputBox.textContent;
-            document.body.appendChild(element);
-            element.select();
-            document.execCommand("copy")
-            document.body.removeChild(element);
-            alert("Copied!!")
-        }
-    </script>
+    <script src="main.js" type="text/javascript"></script>
 </head>
 
 <body>
